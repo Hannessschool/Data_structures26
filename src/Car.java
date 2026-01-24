@@ -1,17 +1,11 @@
-public class Car {
+public class Car extends Vehicle {
 
     private String name;
 
     public Car(String name){
-        this.name = name;
+        super.name = name;
+        super.vehicleType = "motorized";
     }
 
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
 }
 

@@ -8,12 +8,10 @@ public class Main {
 
 
         Car car = new Car("Volkswagen");
-        Car car2 = new Car("Tesla");
+        Bike bike = new Bike("Harley");
 
-        System.out.println(car.getName());
-        car.setName("Volvo");
-        System.out.println(car.getName());
-        System.out.println(car2.getName());
+        System.out.println(car.getName() + " is " + car.vehicleType);
+        System.out.println(bike.getName() + " is " + bike.vehicleType);
     }
 
 }
