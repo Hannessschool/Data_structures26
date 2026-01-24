@@ -1,8 +1,17 @@
-public class Clothing {
+abstract class Clothing {
 
     String type;
     String color;
     int price;
+    int condition;
+
+    Clothing(int condition){
+        this.condition = condition;
+
+        System.out.printf("Condition: %d\n", condition);
+    }
+
+    abstract void mend();
 
     public String getType(){
         return type;
