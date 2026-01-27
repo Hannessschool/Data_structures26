@@ -12,3 +12,4 @@ class CalculatorTest {
         assertEquals(150, calc.multiply(3, 5, 10));
     }
 }
+
