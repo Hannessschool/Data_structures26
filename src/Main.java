@@ -10,24 +10,17 @@ public class Main {
         System.out.println("Slumptalgenerator. Genererar ett slumpmässigt tal mellan 1 till 100. Tryck enter för att generera slumptalet");
 
         while (true) {
-            ;
+            String input = scanner.nextLine();
 
-            try {
-                String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("q")) {
+                System.out.println("Tack och hej");
+                break;
+            }
 
-                if (input.equalsIgnoreCase("q")) {
-                    System.out.println("Tack och hej");
-                    break;
-                }
-
-                if (!input.isEmpty()) {
-                    Integer.parseInt(input);
-                }
-
+            if (input.isEmpty()) {
                 int randomNumber = random.nextInt(100) + 1;
                 System.out.println("Slumptal: " + randomNumber);
-
-            } catch (NumberFormatException e) {
+            } else {
                 System.out.println("Ogiltig inmatning!");
             }
             System.out.println("tryck enter för ett nytt slumptal, eller q för att avsluta.");
@@ -35,6 +28,7 @@ public class Main {
         scanner.close();
     }
 }
+
 
         /*BikeShop bikeshop = new BikeShop();
         bikeshop.addBike(new Bike("Scott", 500));
