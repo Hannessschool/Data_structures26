@@ -4,12 +4,36 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        Random random = new Random();
+        //Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Slumptalgenerator. Genererar ett slumpmässigt tal mellan 1 till 100. Tryck enter för att generera slumptalet");
+        //Utils.hello();
+        Numbertaker.intro();
 
         while (true) {
+            String numberInput = scanner.nextLine();
+
+            if (numberInput.equalsIgnoreCase("x")) {
+                System.out.println("Tack och välkommen åter");
+                break;
+            }
+
+            boolean correctAnswer = Numbertaker.isInteger(numberInput);
+
+            if (!correctAnswer && !numberInput.equalsIgnoreCase("x")) {
+                System.out.println("Du måste ge ett heltal");
+                continue;
+            }
+
+            System.out.println("Du gav talet: " + numberInput);
+            break;
+        }
+
+        //System.out.println("Slumptalgenerator. Genererar ett slumpmässigt tal mellan 1 till 100. Tryck enter för att generera slumptalet");
+
+
+
+        /*while (true) {
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("q")) {
@@ -138,6 +162,7 @@ public class Main {
         System.out.println("The " + pants.getType() + " are available in " + pants.getColor() + " color and cost " + pants.getPrice() + " euros")*/
 
 
-    //}
+    }
+}
 
 
