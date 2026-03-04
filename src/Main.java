@@ -15,6 +15,12 @@ public class Main {
 
         //hello();
 
+        //Utils.loopBackwards(10, 0);
+
+
+        Utils.pow(4, 2);
+        System.out.println("Produkt av 4 upphöjt till 2: " + Utils.pow(4, 2));
+        System.exit(0);
 
         Recursy.loop(0,10);
         System.out.println(" \n fibonacci: " + Recursy.fib(4)); // 1, 1, 2, 3, 5, 8...
